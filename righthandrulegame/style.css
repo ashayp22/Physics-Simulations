@@ -1,0 +1,151 @@
+/*style code here*/
+body {
+    font-family: 'Noto Sans', sans-serif;
+    background: #50C9C3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #96DEDA, #50C9C3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #96DEDA, #50C9C3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    text-align: center
+}
+
+h1 {
+    font-size: 4vw
+}
+
+h1:after
+{
+    content:' ';
+    display:block;
+    border:2px solid black;
+}
+
+#timer {
+    font-size: 2vw
+}
+
+#options {
+    display: inline-flex;
+}
+
+#easy {
+    background:#ffb24c;
+    height:18vw;
+    width:18vw;
+    border: 10px solid #000000;
+    font-size: 2.4vw;
+}
+
+#clock, #counter {
+    display: none;
+    visibility: hidden;
+}
+
+#medium {
+     background: #ff893d;
+     height:18vw;
+     width:18vw;
+     border: 10px solid #000000;
+     margin-right: 0px;
+    font-size: 2.4vw;
+}
+
+#hard {
+    background: #ff651c;
+    height:18vw;
+    width:18vw;
+    border: 10px solid #000000;
+    font-size: 2.4vw;
+}
+
+#flux {
+    background: #d24200;
+    height:18vw;
+    width:18vw;
+    border: 10px solid #000000;
+    font-size: 2.4vw;
+}
+
+#what {
+    background: #9c3500;
+    height:18vw;
+    width:18vw;
+    border: 10px solid #000000;
+    font-size: 2.4vw;
+}
+
+#game, #help {
+    visibility: hidden;
+    display: none;
+}
+
+#help {
+    border: .5vw dashed #F35921;
+}
+
+
+.btn {
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+    background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+    background-color:#ffffff;
+    border-radius:6px;
+    border:1px solid #dcdcdc;
+    display:inline-block;
+    cursor:pointer;
+    color:#666666;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:6px 24px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #ffffff;
+}
+.btn:hover {
+    background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+    background-color:#f6f6f6;
+}
+.btn:active {
+    position:relative;
+    top:1px;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    color: #ff651c;
+}
+
+#modalp {
+    font-size:75px;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 100px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}

@@ -1,0 +1,120 @@
+/*style code here*/
+
+body {
+	text-align: center;
+	background: #F7FFF7;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #FFFFFF, #F7FFF7);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #FFFFFF, #F7FFF7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	/* font-family: 'Sriracha', cursive; */
+	font-family: 'Ubuntu';
+}
+
+#info, #info2 {
+	border: 5px solid #1A535C;
+	display: inline-block;
+	width: fit-content;
+	text-align: center;
+	font-size: 10px;
+	background: #FFE66D;
+}
+
+
+
+#controls {
+	border: 5px solid #1A535C;
+	display: inline-block;
+	width: 100%;
+	background: #FFE66D;
+
+}
+
+canvas {
+	background-color: #1A535C;
+}
+
+h1 {
+	font-size: 30px;
+}
+
+h2 {
+	font-size: 20px;
+}
+
+.slidecontainer {
+	width: 250px; /* Width of the outside container */
+}
+
+.slider {
+	-webkit-appearance: none;
+	width: 100%;
+	height: 10px;
+	border-radius: 5px;
+	background: #7e7e7e;
+	outline: none;
+	opacity: 0.7;
+	-webkit-transition: .2s;
+	transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+	opacity: 1; /* Fully shown on mouse-over */
+}
+
+.slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background: #4ecdc4;
+	cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background: #4ecdc4;
+	cursor: pointer;
+}
+
+.row {
+	display: flex; /* equal height of the children */
+	margin:0 auto;
+	justify-content: center;
+}
+
+.col {
+	flex: 1; /* additionally, equal width */
+	padding: 1em;
+	border: solid;
+}
+
+.myButton {
+	box-shadow: 0px 10px 14px -7px #bb5e5e;
+	background:linear-gradient(to bottom, #ff6b6b 5%, #e16b6b 100%);
+	background-color: #ff6b6b;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: 'Ubuntu';
+	font-size:20px;
+	font-weight:bold;
+	padding:13px 32px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #bb5e5e;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #e16b6b 5%, #ff6b6b 100%);
+	background-color: #bb5e5e;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+h1 {
+	border-bottom: 2px solid #1A535C
+}

@@ -1,0 +1,120 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Parallel Plate Simulation</title>
+  <meta name="description" content="Parallel Plate Simulation">
+  <meta name="author" content="Ashay Parikh">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Sriracha&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script
+          src="https://code.jquery.com/jquery-3.4.1.js"
+          integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+          crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+
+</head>
+
+<body onload = "start()">
+  <h1>Particle between Parallel Plates Simulation</h1>
+
+
+  <div class = "row">
+
+  <canvas class = "column" id = "canvas" width = "500px" height = "500px"></canvas><br>
+
+    <div class = "column" id = "info">
+      <h2>Initial Particle Settings</h2>
+    <p id = "particleMass">Particle Mass: 9.1e-31 kg</p>
+    <div class="slidecontainer">
+      <input type="range" min="1" max="30" value="9.1" step = "0.1" class="slider" id="massSlider" onchange="changeMass()">
+    </div>
+
+    <p id = "particleCharge">Particle Charge: -1.6e-19 C</p>
+    <div class="slidecontainer">
+      <input type="range" min="-10" max="10" value="-1.6" step = "0.1" class="slider" id="chargeSlider" onchange="changeCharge()">
+    </div>
+
+    <p id = "particleVelocityX">Particle Initial X Velocity: 3000000 m/s</p>
+    <div class="slidecontainer">
+      <input type="range" min="100000" max="99999999" value="3000000" step = "100" class="slider" id="velocityXSlider" onchange="changeXVelocity()">
+    </div>
+
+    <p id = "particleVelocityY">Particle Initial Y Velocity: 0 m/s</p>
+    <div class="slidecontainer">
+      <input type="range" min="-100000" max="100000" value="0" step = "1" class="slider" id="velocityYSlider" onchange="changeYVelocity()">
+    </div>
+
+
+    </div>
+
+    <div id = "info2" class = "column">
+      <h2>Plate Electrostatics Properties</h2>
+
+      <p id = "field">Uniform Electric Field: 178 N/C</p>
+      <div class="slidecontainer">
+        <input type="range" min="10" max="300" value="178" step = "0.1" class="slider" id="fieldSlider" onchange="changeField()">
+      </div>
+
+      <p id = "voltage">Voltage: 8.9 V</p>
+      <div class="slidecontainer">
+        <input type="range" min="1" max="15" value="8.9" step = "0.01" class="slider" id="voltageSlider" onchange="changeVoltage()">
+      </div>
+
+      <p id = "capacitance">Capacitance: 1.77e-13 Farads</p>
+      <!--<div class="slidecontainer">-->
+        <!--<input type="range" min="1" max="30" value="1.77" step = "0.01" class="slider" id="capacitanceSlider" onchange="changeCapacitance()">-->
+      <!--</div>-->
+
+      <p id = "platecharge">Plate Charge: 1.58e-12 m^2</p>
+      <div class="slidecontainer">
+        <input type="range" min="0.1" max="10" value="1.58" step = "0.01" class="slider" id="platechargeSlider" onchange="changePlateCharge()">
+      </div>
+
+      <h2>Plate Physical Properties</h2>
+
+      <p id = "area">Plate Area: .001 m^2</p>
+      <div class="slidecontainer">
+        <input type="range" min="0.001" max="0.009" value=".001" step = "0.0001" class="slider" id="areaSlider" onchange="changeArea()">
+      </div>
+
+      <p id = "distance">Plate Distance: .05 m</p>
+      <div class="slidecontainer">
+        <input type="range" min="0.02" max="0.06" value=".05" step = "0.001" class="slider" id="distanceSlider" onchange="changeDistance()">
+      </div>
+
+
+      <p id = "width">Plate Width: 100 mm</p>
+      <div class="slidecontainer">
+        <input type="range" min="25" max="100" value="100" step = "0.1" class="slider" id="widthSlider" onchange="changeWidth()">
+      </div>
+
+    </div>
+
+  </div>
+
+  <div id = "controls">
+    <h2>Controls</h2>
+    <input type = "button" class = "myButton" onclick = "begin()" value = "Start Particle">
+    <input type = "button" class = "myButton" onclick = "stop()" value = "Stop Particle">
+    <input type = "button" class = "myButton" onclick = "reset()" value = "Reset Particle">
+    <input type = "button" class = "myButton" onclick = "resetAll()" value = "Reset All">
+    <h2>Particle Data</h2>
+    <p id = "data"></p>
+    <h2>Formula Reference</h2>
+    <p>E = F/q</p>
+    <p>V = E*d</p>
+    <p>Q = V*C</p>
+    <p>C = ε*A/d</p>
+    <p>...where E = electric field, V = voltage, q = charge of particle, F = force<br>
+      d = distance between plates, C = capacitance, ε = 8.85e-12 C^2/N*m^2, A = area of plate, Q = charge of plate</p>
+  </div>
+  <footer>&copy; 2020 Ashay Parikh</footer>
+</body>
+</html>
+
+

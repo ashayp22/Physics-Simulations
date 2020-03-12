@@ -1,0 +1,119 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The Right Hand Rule Game</title>
+  <meta name="description" content="The Right Hand Rule Game">
+  <meta name="author" content="Ashay Parikh">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+  <script
+          src="https://code.jquery.com/jquery-3.4.1.js"
+          integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+          crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+
+</head>
+
+<body>
+
+<h1>The Right Hand Rule Game</h1>
+
+
+<div id = "difficulty">
+  <p>Requirements: two hands</p>
+
+  <div id = "options">
+
+  <div id = "easy" onclick = "chooseEasy()">
+    <p>Current<br>Magnetic Field<br>RHR 1</p>
+  </div>
+  <div id= "medium" onclick = "chooseMedium()">
+    <p>Current<br>Magnetic Field<br>Force<br>RHR 2</p>
+  </div>
+  <div id= "hard" onclick = "chooseHard()">
+    <p>Charge<br>Magnetic Field<br>Force<br>RHR 3</p>
+  </div>
+  <div id= "flux" onclick = "chooseFlux()">
+    <p>Induced<br>Magnetism<br>RHR 4</p>
+  </div>
+    <div id= "what" onclick = "showHelp()">
+      <p>What<br>is<br>a<br>RHR?</p>
+    </div>
+  </div>
+</div>
+
+<div id = "game">
+  <h2 id = "timer">1:00</h2>
+  <h2 id = "points">Points: 0</h2>
+  <p id = "info"></p>
+  <input type = "button" id = "clock" class =  "btn"  onclick = "clockwise()" value = "CLOCKWISE">
+  <input type = "button" id = "counter" class =  "btn"  onclick = "counterwise()" value = "COUNTERCLOCKWISE">
+  <br>
+  <br>
+  <canvas id = "canvas" width = "800vw" height = "300vw"></canvas>
+  <br>
+  <input type = "button" class =  "btn"  onclick = "check()" value = "CHECK">
+  <input type = "button" class =  "btn"  onclick = "restart()" value = "RESTART">
+  <input type = "button" class =  "btn"  onclick = "menu()" value = "MENU">
+  <p>Note: This is on a 2D Plane, and the vectors are NOT drawn to scale</p>
+</div>
+
+<div id = "help">
+  <h2>What is a Right Hand Rule?</h2>
+  <br>
+  <p>The right hand rule is a common mnemonic for understanding orientation of axes in 3D space.<br>
+      One use of the rule is for understanding direction in Physics, specifically Magnetism. <br>
+    Using the rule, a student can figure out the direction of magnetic fields (B), current (I), charge (Q), and force (F). <br>
+    <br>
+    There are three variations of the rule and a special case, each with a different purpose.<br>
+
+    <br>RHR #1 - Determining the direction of a magnetic field given current
+
+    <br>RHR #2 - Determining the direction of force given current and a magnetic field
+
+    <br>RHR #3 - Determining the direction of a force given charge and a magnetic field
+
+    <br>RHR #4 (unofficial) - Determining the direction of current as a result of a change in magnetic flux<br>
+
+    <br>
+
+    <img src="rhrimg.jpg" alt="Right Hand Rule" style="width:50vw;height:30vw;">
+
+    <br>
+  <p>If you want a detailed explanation, visit these links:</p><br>
+  <a href="https://www.khanacademy.org/test-prep/mcat/physical-processes/magnetism-mcat/a/using-the-right-hand-rule" target="_blank">Khan Academy</a><br>
+  <a href="https://nationalmaglab.org/education/magnet-academy/watch-play/interactive/right-and-left-hand-rules" target="_blank">Magnet Academy</a><br>
+  <a href="https://mathworld.wolfram.com/Right-HandRule.html" target="_blank">Wolfram</a><br>
+  <a href="https://www.electrical4u.com/lenz-law-of-electromagnetic-induction/" target="_blank">Magnetic Flux</a><br>
+
+  <br>
+  <input type = "button" class =  "btn"  onclick = "hideHelp()" value = "BACK">
+  <br>
+  <br>
+
+
+</div>
+
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <!--<span class="close" onclick = "">&times;</span>-->
+    <p id = "modalp">Game Over</p>
+    <p id = "modalScore">You got a score of </p>
+    <input type = "button" class =  "btn"  onclick = "restart()" value = "PLAY AGAIN">
+    <input type = "button" class =  "btn"  onclick = "menu()" value = "MENU">
+  </div>
+
+</div>
+
+
+
+<footer>&copy; 2020 Ashay Parikh</footer>
+</body>
+</html>
