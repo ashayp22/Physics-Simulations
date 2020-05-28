@@ -11,3 +11,9 @@ Click the projects to see the live site:
 * [Parallel Plate Simulation](https://ashayp.com/parallelplatesimulation/)
 
 The code for the projects is in this Git repository.
+
+* [Vector Components](https://github.com/ashayp22/Physics-Simulations/tree/master/Vector%20Components)
+* [The Right Hand Rule Game](https://github.com/ashayp22/Physics-Simulations/tree/master/righthandrulegame)
+* [Parallel Plate Simulation](https://github.com/ashayp22/Physics-Simulations/tree/master/parallelplatesimulation)
+
+Enjoy 😃
