@@ -1,5 +1,5 @@
 # Physics-Simulations
-These are some physics simulations that I started to create while taking AP Physics 1 and 2. I created them to not only better comprehend physics topics, but improve my classmates' physics skills.
+These are some physics simulations that I started to create while taking AP Physics 1 and 2. I created them to better comprehend physics topics and improve my classmates' physics skills.
 
 The topics I have covered so far are Vectors, Electrostatics (Parallel Plates), and Magnetism (The Right Hand Rule).
 I will add more in the future.
